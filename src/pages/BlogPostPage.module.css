@@ -9,7 +9,13 @@
 }
 
 .article {
-  padding-top: 80px;
+  padding-top: 78px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 104px;
+  }
 }
 
 .hero {

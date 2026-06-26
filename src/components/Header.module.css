@@ -1,6 +1,30 @@
-.header {
+.topbar {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  padding: 0.35rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .topbar {
+    font-size: 0.8rem;
+    padding: 0.4rem 2rem;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 28px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -176,6 +200,10 @@
 
   .scrolled {
     padding: 0.6rem 0;
+  }
+
+  .header {
+    top: 32px;
   }
 
   .logo img {

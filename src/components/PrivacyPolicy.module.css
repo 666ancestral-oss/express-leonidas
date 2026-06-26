@@ -1,5 +1,11 @@
 .page {
-  padding-top: 80px;
+  padding-top: 78px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-top: 104px;
+  }
 }
 
 .hero {
