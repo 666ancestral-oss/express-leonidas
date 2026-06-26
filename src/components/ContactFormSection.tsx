@@ -29,6 +29,7 @@ function ContactFormSection() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   function validate(): boolean {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
@@ -43,34 +44,31 @@ function ContactFormSection() {
     return Object.keys(newErrors).length === 0;
   }
 
-  const TO_EMAIL = SITE_CONFIG.email;
-
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!validate()) return;
+    setSubmitError('');
 
     setIsSubmitting(true);
 
-    const subject = encodeURIComponent(`Nova Cotação - ${SITE_CONFIG.name}`);
-    const body = encodeURIComponent(
-      [
-        `Nova Cotação - ${SITE_CONFIG.name}`,
-        ``,
-        `Nome: ${form.nome}`,
-        `Empresa: ${form.empresa || '---'}`,
-        `Telefone: ${form.telefone}`,
-        `Tipo de Carga: ${form.tipoCarga}`,
-        `Origem: ${form.origem}`,
-        `Destino: ${form.destino}`,
-        `Detalhes: ${form.mensagem || '---'}`,
-      ].join('\n')
-    );
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
 
-    window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+      if (!res.ok) {
+        throw new Error('Erro ao enviar mensagem');
+      }
 
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setForm(INITIAL_FORM);
+      setSubmitted(true);
+      setForm(INITIAL_FORM);
+    } catch {
+      setSubmitError('Erro ao enviar. Tente novamente ou envie um email diretamente para ' + SITE_CONFIG.email);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   function setField<K extends keyof FormData>(key: K, value: FormData[K]) {
@@ -234,6 +232,7 @@ function ContactFormSection() {
               ></textarea>
             </div>
 
+            {submitError && <div className={styles.error} role="alert">{submitError}</div>}
             <button
               type="submit"
               className={styles.submitBtn}
