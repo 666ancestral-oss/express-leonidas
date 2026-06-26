@@ -10,6 +10,7 @@ import MapSection from './components/MapSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactFormSection from './components/ContactFormSection';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
 import BrandDivider from './components/BrandDivider';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import CookieConsent from './components/CookieConsent';
@@ -74,6 +75,7 @@ function HomePage() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
       <CookieConsent />
     </>
   );
@@ -85,6 +87,7 @@ function PrivacyPage() {
       <Header variant="subpage" />
       <PrivacyPolicy />
       <Footer />
+      <ScrollToTop />
       <CookieConsent />
     </>
   );

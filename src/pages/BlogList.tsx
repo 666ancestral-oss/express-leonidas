@@ -3,6 +3,7 @@ import { Calendar, Tag, ArrowRight, FileText } from 'lucide-react';
 import { getPublishedPosts } from '../services/blogService';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 import styles from './BlogList.module.css';
 
 export default function BlogList() {
@@ -63,6 +64,7 @@ export default function BlogList() {
         </section>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

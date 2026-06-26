@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar } from 'lucide-react';
 import { getPostBySlug } from '../services/blogService';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 import styles from './BlogPostPage.module.css';
 
 export default function BlogPostPage() {
@@ -74,6 +75,7 @@ export default function BlogPostPage() {
         </article>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
