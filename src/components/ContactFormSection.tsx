@@ -43,7 +43,7 @@ function ContactFormSection() {
     return Object.keys(newErrors).length === 0;
   }
 
-  const TO_EMAIL = '666ancestral@gmail.com';
+  const TO_EMAIL = SITE_CONFIG.email;
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();

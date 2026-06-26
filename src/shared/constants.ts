@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   tagline: 'Logística Premium',
   url: 'https://el.edgeweb.com.br',
   phone: '(11) 94780-7184',
-  email: 'contato@expressoleonidas.com.br',
+  email: 'expressoleonidas@gmail.com',
   address: 'São Paulo, SP - Atendimento Nacional',
   whatsapp: {
     number: '5511947807184',
