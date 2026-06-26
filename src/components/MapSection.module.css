@@ -1,0 +1,112 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.content p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.mapContainer {
+  width: 100%;
+  position: relative;
+  height: 350px;
+  background: radial-gradient(circle at center, rgba(11, 61, 145, 0.04) 0%, transparent 70%);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.abstractMap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-orange-main);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.5), 0 0 60px rgba(249, 115, 22, 0.15);
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.node::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(249, 115, 22, 0.2);
+  animation: ripple 3s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7rem 0;
+  }
+
+  .content p {
+    font-size: 1.125rem;
+  }
+
+  .mapContainer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding: 9rem 0;
+  }
+
+  .container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .content p {
+    margin: 0;
+  }
+
+  .mapContainer {
+    flex: 1.2;
+    height: 500px;
+  }
+}

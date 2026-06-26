@@ -1,0 +1,138 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-gray-light);
+}
+
+.sidebar {
+  width: 240px;
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebarLogo {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarLogo h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sidebarLogo span {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.navLink:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navLinkActive {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--color-orange-main);
+}
+
+.sidebarFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.logoutBtn:hover {
+  color: var(--color-white);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topBar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-medium);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topBar h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.viewSiteBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-blue-medium);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.viewSiteBtn:hover {
+  color: var(--color-orange-main);
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topBar {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}

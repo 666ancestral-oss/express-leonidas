@@ -1,0 +1,135 @@
+.notFound {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.notFound h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.article {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-blue-dark), var(--color-blue-medium));
+  color: var(--color-white);
+  padding: 3rem 0;
+}
+
+.heroInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-white);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 700px;
+}
+
+.excerpt {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.coverWrapper {
+  padding: 2rem 0;
+}
+
+.coverContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.cover {
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-premium-lg);
+  object-fit: cover;
+}
+
+.content {
+  padding: 1rem 1.5rem 4rem;
+}
+
+.contentInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contentH2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-blue-dark);
+  margin: 2rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.contentH3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 1.5rem 0 0.75rem;
+}
+
+.contentP {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .content {
+    padding: 2rem 2rem 6rem;
+  }
+}

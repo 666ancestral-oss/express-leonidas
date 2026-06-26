@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B3D91"/>
+  <rect x="0" y="400" width="1200" height="230" fill="#F8FAFC" opacity="0.03"/>
+
+  <!-- Abstract lines -->
+  <line x1="80" y1="520" x2="350" y2="520" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+  <line x1="80" y1="540" x2="280" y2="540" stroke="#FDBA2D" stroke-width="4" stroke-linecap="round"/>
+  <line x1="80" y1="560" x2="450" y2="560" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.15"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="150" r="180" fill="#F97316" opacity="0.06"/>
+  <circle cx="1000" cy="180" r="100" fill="#FDBA2D" opacity="0.08"/>
+  <circle cx="130" cy="100" r="60" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- Brand name -->
+  <text x="80" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1">Expresso</text>
+  <text x="80" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#FFFFFF" letter-spacing="-1">Leonidas</text>
+
+  <!-- Tagline -->
+  <text x="80" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="500" fill="#F97316" letter-spacing="2">LOGISTICA PREMIUM</text>
+
+  <!-- Badge -->
+  <rect x="80" y="420" width="320" height="56" rx="28" fill="#FFFFFF" opacity="0.1"/>
+  <text x="240" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">Fretes para todo o Brasil</text>
+
+  <!-- Truck icon (simplified) -->
+  <rect x="820" y="430" width="260" height="80" rx="8" fill="#FFFFFF" opacity="0.08"/>
+  <rect x="840" y="445" width="100" height="40" rx="4" fill="#FFFFFF" opacity="0.12"/>
+  <rect x="955" y="455" width="80" height="30" rx="4" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="875" cy="500" r="14" fill="#FFFFFF" opacity="0.15"/>
+  <circle cx="975" cy="500" r="14" fill="#FFFFFF" opacity="0.15"/>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#gradient)"/>
+
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FDBA2D"/>
+    </linearGradient>
+  </defs>
+</svg>

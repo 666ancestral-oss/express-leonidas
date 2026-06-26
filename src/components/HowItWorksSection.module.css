@@ -1,0 +1,151 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.timeline {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.lineIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-blue-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-top: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.step:hover .dot {
+  background: var(--color-blue-medium);
+  box-shadow: 0 0 0 4px rgba(30, 99, 198, 0.15);
+}
+
+.innerDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-blue-medium);
+  transition: background 0.3s ease;
+}
+
+.step:hover .innerDot {
+  background: var(--color-white);
+}
+
+.line {
+  width: 2px;
+  flex-grow: 1;
+  background: var(--color-gray-medium);
+  margin: 0.5rem 0;
+  min-height: 40px;
+}
+
+.step:last-child .line {
+  display: none;
+}
+
+.content {
+  padding-bottom: 3rem;
+}
+
+.stepNumber {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-orange-main);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding: 9rem 0;
+  }
+
+  .container {
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .header {
+    flex: 1;
+    text-align: left;
+  }
+
+  .header p {
+    margin: 0;
+  }
+
+  .timeline {
+    width: auto;
+  }
+}
