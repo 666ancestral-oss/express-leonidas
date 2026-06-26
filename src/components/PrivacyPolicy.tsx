@@ -1,8 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
 import styles from './PrivacyPolicy.module.css';
+import { SITE_CONFIG } from '../shared/constants';
 
 const CONTROLLER = 'Expresso Leonidas';
-const CONTROLLER_EMAIL = 'contato@expressoleonidas.com.br';
+const CONTROLLER_EMAIL = SITE_CONFIG.email;
 const LAST_UPDATED = 'Junho de 2026';
 
 function PrivacyPolicy() {
